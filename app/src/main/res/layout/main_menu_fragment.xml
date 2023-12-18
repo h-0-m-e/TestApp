@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settingsButton"
+        style="@style/LeftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/settings_24"
+        app:iconGravity="end"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/balanceButton"
+        style="@style/RightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        app:icon="@drawable/coin_24"
+        app:iconTint="@color/gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2345" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/levelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="monospace"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toStartOf="@id/balanceButton"
+        app:layout_constraintStart_toEndOf="@id/settingsButton"
+        app:layout_constraintTop_toBottomOf="@id/balanceButton"
+        tools:text="LEVEL 10" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/giftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/blue"
+        android:contentDescription="@string/def_desc"
+        android:src="@drawable/gift_24"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/levelButton"
+        app:layout_constraintStart_toEndOf="@id/levelButton"
+        app:layout_constraintTop_toTopOf="@id/levelButton" />
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/def_desc"
+        android:src="@drawable/main_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/statButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/levelButton" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/unitSpeedGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="unitSpeedBackground, unitSpeedButton, unitSpeedDesc, unitSpeedValue, unitSpeedIcon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unitSpeedBackground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/light_gray"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unitSpeedIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        app:icon="@drawable/unit_add_48"
+        app:iconTint="@color/gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/unitSpeedValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/gold"
+        app:layout_constraintBottom_toTopOf="@id/unitSpeedDesc"
+        app:layout_constraintEnd_toStartOf="@id/unitSpeedButton"
+        app:layout_constraintStart_toEndOf="@id/unitSpeedIcon"
+        app:layout_constraintTop_toTopOf="@id/unitSpeedBackground"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="172" />
+
+    <TextView
+        android:id="@+id/unitSpeedDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="@string/units_per_second"
+        android:textColor="@color/gold"
+        app:layout_constraintBottom_toBottomOf="@id/unitSpeedBackground"
+        app:layout_constraintEnd_toStartOf="@id/unitSpeedButton"
+        app:layout_constraintStart_toEndOf="@id/unitSpeedIcon"
+        app:layout_constraintTop_toBottomOf="@id/unitSpeedValue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unitSpeedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple"
+        android:elevation="10dp"
+        android:text="@string/free"
+        app:icon="@drawable/video_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/unitCurrentGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="unitCurrentBackground, unitCurrentButton, unitCurrentDesc, unitCurrentValue, unitCurrentIcon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unitCurrentBackground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/light_gray"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@id/unitSpeedBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unitCurrentIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        app:icon="@drawable/unit_48"
+        app:iconTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@id/unitCurrentBackground"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/unitCurrentValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/unitCurrentDesc"
+        app:layout_constraintEnd_toStartOf="@id/unitCurrentButton"
+        app:layout_constraintStart_toEndOf="@id/unitCurrentIcon"
+        app:layout_constraintTop_toTopOf="@id/unitCurrentBackground"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="2670" />
+
+    <TextView
+        android:id="@+id/unitCurrentDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="@string/units"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@id/unitCurrentBackground"
+        app:layout_constraintEnd_toStartOf="@id/unitCurrentButton"
+        app:layout_constraintStart_toEndOf="@id/unitCurrentIcon"
+        app:layout_constraintTop_toBottomOf="@id/unitCurrentValue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unitCurrentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blue"
+        android:elevation="10dp"
+        app:icon="@drawable/coin_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/unitCurrentBackground"
+        tools:text="2500" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/light_gray"
+        android:text="@string/tap_to_play"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/unitCurrentBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pvpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/pvp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/pvp_48"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/playButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/statButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/silver"
+        android:textColor="@color/black"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@id/pvpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disableAdsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/blue"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/do_not_48"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/playButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/blue"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/shop_48"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/playButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/leaderboardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/blue"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/leaderboard_48"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/shopButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

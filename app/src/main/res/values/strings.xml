@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="units">UNITS</string>
+    <string name="free" translatable="false">FREE</string>
+    <string name="units_per_second">UNITS PER SECOND</string>
+    <string name="tap_to_play">TAP TO PLAY</string>
+    <string name="pvp" translatable="false">PVP</string>
+    <string name="silver">silver</string>
+    <string name="def_desc">Description</string>
+</resources>

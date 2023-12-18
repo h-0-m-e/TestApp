@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="units">ЮНИТОВ</string>
+    <string name="def_desc">Описание</string>
+    <string name="units_per_second">ЮНИТОВ В СЕКУНДУ</string>
+    <string name="tap_to_play">НАЧАТЬ</string>
+    <string name="silver">серебро</string>
+</resources>
